@@ -1,38 +1,142 @@
 .App {
   text-align: center;
+  background-color: #e9ecef;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#template{
+  width: 1200px;
+  height: 900px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#bookHead {
+  width: 100%;
+  height: 20vh;
+  padding-top: 40px;
+  border-bottom: 3px solid #222;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#bookHead h1{
+  margin-bottom: 20px;
+}
+
+#bookHead ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#bookHead ul li{
+  width: 22%;
+  height: 50px;
+  border-radius: 14px;
+  background: #222;
+  color: #fff;
+  line-height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#bookHead ul li:hover{
+  transform: scale(1.02);
+}
+#bookList{
+  height: 70%;
+  overflow-y: scroll;
+  border-bottom: 3px solid #222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#bookList ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+  border-bottom: 1px solid #ccc;
+}
+#bookList ul:first-child{
+  border-bottom: 1px solid #222;
+}
+#bookList ul:first-child li{
+  font-size: 20px;
+  font-weight: bold;
+}
+#bookList ul li{
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+#bookList ul li:first-child{
+  width: 10%;
+}
+#bookList ul li:last-child{
+  width: 10%;
+}
+
+#bookAdd {
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+#bookAdd .btn.on {
+  display: none;
+}
+#bookAdd .btn {
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 26px;
+  line-height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.3s;
+}
+
+#bookAdd .btn:first-child{
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#bookAdd .btn:last-child{
+  right: 5.5%;
+  transform: rotate(45deg);
+}
+#bookAdd #btn2{
+  font-size: 20px;
+}
+
+#hidden{
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  /* background: palegreen; */
+  display: none;
+}
+#hidden.on{
+display: block;
+}
+#hidden input{
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  outline: 0;
+  margin: 0 6px;
+  border: 1px solid #222;
+  border-radius: 4px;
+}
+#hidden input:nth-child(2){
+  width: 500px;
 }
